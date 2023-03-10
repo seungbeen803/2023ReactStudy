@@ -1,8 +1,14 @@
 import './App.css';
 
 function App() {
-  const name = undefined;
-  return <div> { name || '리액트' } </div>
+  const name = '리액트';
+  const style1 = {
+    backgroundColor : 'black',
+    color : 'aqua',
+    fontSize : '48px',
+    padding : 16 // 단위가 px
+  };
+  return <div style={style1}> { name } </div>
 }
 
 export default App;
