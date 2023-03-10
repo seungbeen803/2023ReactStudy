@@ -1,16 +1,8 @@
 import './App.css';
 
 function App() {
-  const name = 'React2';
-  return (
-    <div>
-      { name === '리액트' ? (
-        <h1> {name} 안녕 </h1>
-      ) : (
-      <h2> 잘 작동하니? </h2>
-      )}
-    </div>
-  );
+  const name = '리액트';
+  return <div> { name === '리액트' ? <h1> 리액트입니다. </h1> : null } </div>
 }
 
 export default App;
