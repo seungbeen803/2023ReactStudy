@@ -6,6 +6,7 @@ function App() {
     backgroundColor : 'black',
     color : 'aqua',
     fontSize : '48px',
+    fontWeight : 'bold',
     padding : 16 // 단위가 px
   };
   return <div style={style1}> { name } </div>
