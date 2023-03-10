@@ -1,7 +1,7 @@
 import './App.css';
 
 function App() {
-  const number = 0;
+  const number = 10;
   return number && <div> 내용</div>
 }
 
