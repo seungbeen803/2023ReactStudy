@@ -1,8 +1,8 @@
 // MyComponent.js
 // function ----> = () => { }
 // function MyComponent { }
-const MyComponent = () => {
-  return <div> 나의 새롭고 멋진 컴포넌트 </div>
+const MyComponent = props => {
+  return <div> 안녕하세요. 제 이름은 {props.name} </div>
 }
 
 export default MyComponent
