@@ -11,8 +11,4 @@ const MyComponent = props => {
   );
 };
 
-MyComponent.defaultProps =  {
-  name : "기본이름"
-};
-
 export default MyComponent
