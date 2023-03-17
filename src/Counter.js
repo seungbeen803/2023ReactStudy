@@ -5,7 +5,7 @@ class Counter extends Component {
       number : 0,
       fixedNumber : 0
     };
-    
+
   // 생성자 작성없이 state문을 작성하면 초깃값을 설정할 수 있도록
   // 내부적으로 생성자가 실행되고 있음
   render() {
@@ -24,7 +24,8 @@ class Counter extends Component {
             // this.state를 사용하여 state에 새로운 값을 넣을 수 있다.
             // setState메서드에 의해서만 state(number)
             // 값을 변경할 수 있다.
-            this.setState({number: number+1});
+            this.setState({number: number + 1});
+            this.setState({number: this.state.number + 1});
           }}
         >
           +1
