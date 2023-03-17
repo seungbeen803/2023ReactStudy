@@ -26,10 +26,15 @@ class Counter extends Component {
                 number: prevState.number + 1
               }
             });
+            this.setState((prevState) => {
+              return {
+                number: prevState.number + 1
+              }
+            });
           }
         }
         >
-          +1
+          +2
         </button>
       </div>
     );
