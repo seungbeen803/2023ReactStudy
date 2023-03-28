@@ -1,42 +1,24 @@
 // EventPractice.js
 import { Component } from "react";
 
-class EventPractice extends Component {
-  state = {
-    usernaum: '',
-    message: "",
+const EventPractice = () => {
+  const [username, setUsername] = useState("");
+  const [message, setMessage] = useState("");
+  const onChangeUsername = (e) => setUsername(e.target.vaule);
+  const onChangeMessage = (e) => setMessage(e.target.vaule);
+
+  const onClick = () => {
+    alert(usernmae + " : " + message);
+    setUsername("");
+    setMessage("");
   };
 
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    // 생성자 메서드는 this(현재 객체)와 메서드를 묶어주는 역할을 한다.
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      // 첫번째 input박스를 선택하면 [e.target.name]값은 username이 된다.
-      // 두번째 input박스를 선택하면 [e.target.name]값은 message가 된다.
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  handleClick = () => {
-    alert(this.state.username + " : " + this.state.message);
-    this.setState({
-      username: '',
-      message: "",
-    });
-  };
-
-  handleKeyDown = (e) => {
+  const onKeyDown = (e) => {
     if(e.key === "Enter") {
-      this.handleClick();
+      onClick();
     }
   };
 
-  render() {
     return (
       <div>
         <h1>이벤트 연습</h1>
@@ -59,7 +41,6 @@ class EventPractice extends Component {
           onClick={this.handleClick}>확인</button>
       </div>
     );
-  }
 }
 
 export default EventPractice;
