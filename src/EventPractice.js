@@ -1,14 +1,16 @@
 // EventPractice.js
-import { Component } from "react";
+import { useState } from "react";
 
 const EventPractice = () => {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
+  // username 값을 변경
   const onChangeUsername = (e) => setUsername(e.target.vaule);
+  // message 값을 변경
   const onChangeMessage = (e) => setMessage(e.target.vaule);
 
   const onClick = () => {
-    alert(usernmae + " : " + message);
+    alert(username + " : " + message);
     setUsername("");
     setMessage("");
   };
@@ -26,19 +28,18 @@ const EventPractice = () => {
           type="text"
           name="username"
           placeholder="사용자 이름"
-          value={this.state.username}
-          onChange={this.handleChange}
+          value={username}
+          onChange={onChangeUsername}
           />
           <input
           type="text"
           name="message"
           placeholder="아무거나 입력해보세요"
-          value={this.state.message}
-          onChange={this.handleChange}
-          onKeyDown={this.handleKeyDown}
+          value={message}
+          onChange={onChangeMessage}
+          onKeyDown={onKeyDown}
           />
-        <button
-          onClick={this.handleClick}>확인</button>
+        <button onClick={onClick}>확인</button>
       </div>
     );
 }
