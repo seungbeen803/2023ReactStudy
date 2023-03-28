@@ -16,6 +16,8 @@ class EventPractice extends Component {
 
   handleChange = (e) => {
     this.setState({
+      // 첫번째 input박스를 선택하면 [e.target.name]값은 username이 된다.
+      // 두번째 input박스를 선택하면 [e.target.name]값은 message가 된다.
       [e.target.name]: e.target.value,
     });
   };
@@ -26,6 +28,12 @@ class EventPractice extends Component {
       username: '',
       message: "",
     });
+  };
+
+  handleKeyDown = (e) => {
+    if(e.key === "Enter") {
+      this.handleClick();
+    }
   };
 
   render() {
@@ -45,6 +53,7 @@ class EventPractice extends Component {
           placeholder="아무거나 입력해보세요"
           value={this.state.message}
           onChange={this.handleChange}
+          onKeyDown={this.handleKeyDown}
           />
         <button
           onClick={this.handleClick}>확인</button>
