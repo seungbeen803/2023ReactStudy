@@ -1,10 +1,10 @@
 // 모듈 불러오기
 import { Component } from "react";
-import ValidationSample from "./ValidationSample";
+import RefSample from "./RefSample";
 
-class  App extends Component {
+class App extends Component {
     render() {
-        return <ValidationSample />
+        return <RefSample />
     }
 }
 
