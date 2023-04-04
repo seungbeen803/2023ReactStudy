@@ -1,7 +1,7 @@
 // 모듈 불러오기
 //App.js
-import IterationSample from "./IterationSample";
+import IterationSample1 from "./IterationSample1";
 const App = () => {
-    return <IterationSample />;
+    return <IterationSample1 />;
 };
 export default App;
