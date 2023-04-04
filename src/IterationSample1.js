@@ -22,9 +22,9 @@ const IterationSample1 = () => {
         id: nextId,
         text: inputText,
       });
-      // nextId에 1을 더해준다.
+      // nextId 값을 1 증가
       setNextId(nextId + 1);
-      // names 값을 업데이트한다.
+      // nextNames는 추가된 데이터이고 names에게 값을 변경한다.
       setNames(nextNames);
       // inputText를 비운다.
       setInputText("");
