@@ -30,10 +30,19 @@ const IterationSample1 = () => {
       setInputText("");
     };
 
+  // 더블클릭한 id값과 nextNames에 있는 전체데이터와 비교하여
+  // id가 같은 제외한 나머지 데이터를 nextNames에 저장한다.
+  const onRemove = (id) => {
+    const nextNames = names.filter((name) => name.id !== id);
+    setNames(nextNames);
+  }
+  const nameList = names.map((name) => (
 
+    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+      {name.text}
+    </li>
+  ));
 
-
-  const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
   return (
     <>
       <input value={inputText} onChange={onChange} />
